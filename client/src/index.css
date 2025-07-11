@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(33, 13%, 13%);
+  --muted: hsl(210, 40%, 97%);
+  --muted-foreground: hsl(215, 16%, 47%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(33, 13%, 13%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(33, 13%, 13%);
+  --border: hsl(214, 32%, 91%);
+  --input: hsl(214, 32%, 91%);
+  --primary: hsl(142, 70%, 46%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(210, 40%, 97%);
+  --secondary-foreground: hsl(222, 84%, 5%);
+  --accent: hsl(210, 40%, 97%);
+  --accent-foreground: hsl(222, 84%, 5%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --ring: hsl(142, 70%, 46%);
+  --radius: 0.5rem;
+
+  /* Custom brand colors */
+  --brand-primary: hsl(142, 70%, 46%);
+  --brand-secondary: hsl(210, 40%, 97%);
+  --brand-success: hsl(145, 63%, 42%);
+  --brand-link: hsl(197, 71%, 41%);
+  --brand-text: hsl(217, 19%, 14%);
+  --brand-text-secondary: hsl(215, 16%, 47%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 4%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 4%, 16%);
+  --muted-foreground: hsl(240, 5%, 65%);
+  --popover: hsl(240, 10%, 4%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 4%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 4%, 16%);
+  --input: hsl(240, 4%, 16%);
+  --primary: hsl(142, 70%, 46%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(240, 4%, 16%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 4%, 16%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 63%, 31%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(142, 70%, 46%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .project-card {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  
+  .project-card:hover {
+    @apply -translate-y-2 shadow-xl;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-br from-[hsl(142,70%,46%)] to-[hsl(145,63%,42%)] transition-all duration-300 ease-in-out;
+  }
+  
+  .btn-primary:hover {
+    @apply -translate-y-1 shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  
+  .btn-secondary:hover {
+    @apply -translate-y-1 shadow-md;
+  }
+  
+  .coming-soon {
+    @apply bg-gradient-to-br from-[hsl(210,40%,97%)] to-[hsl(214,32%,91%)];
+  }
+  
+  .hero-gradient {
+    @apply bg-gradient-to-br from-[hsl(142,70%,46%)] to-[hsl(145,63%,42%)];
+  }
+  
+  .card-shadow {
+    @apply shadow-lg;
+  }
+  
+  .vote-section {
+    @apply bg-gradient-to-br from-[hsl(210,40%,97%)] to-[hsl(0,0%,100%)];
+  }
+  
+  .mobile-vote-button {
+    @apply fixed bottom-4 left-4 right-4 z-50 md:hidden;
+  }
+  
+  .mobile-vote-button-content {
+    @apply btn-primary w-full px-6 py-4 rounded-2xl text-white font-bold text-lg shadow-2xl;
+  }
+  
+  .mobile-vote-button-content:hover {
+    @apply scale-105;
+  }
+}
+
+html {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+}
