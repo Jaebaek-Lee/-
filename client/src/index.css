@@ -110,15 +110,38 @@
   }
   
   .mobile-vote-button {
-    @apply fixed bottom-4 left-4 right-4 z-50 md:hidden;
+    position: fixed !important;
+    bottom: 1rem !important;
+    left: 1rem !important;
+    right: 1rem !important;
+    z-index: 9999 !important;
+    display: block !important;
+  }
+  
+  @media (min-width: 768px) {
+    .mobile-vote-button {
+      display: none !important;
+    }
   }
   
   .mobile-vote-button-content {
     @apply btn-primary w-full px-6 py-4 rounded-2xl text-white font-bold text-lg shadow-2xl;
+    @apply transform transition-all duration-300 ease-in-out;
+    @apply active:scale-95 active:shadow-lg;
   }
   
   .mobile-vote-button-content:hover {
     @apply scale-105;
+  }
+  
+  @media (hover: none) and (pointer: coarse) {
+    .mobile-vote-button-content:hover {
+      @apply scale-100;
+    }
+    
+    .mobile-vote-button-content:active {
+      @apply scale-95 shadow-lg;
+    }
   }
 }
 

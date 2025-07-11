@@ -277,8 +277,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Mobile Fixed Vote Button */}
+      <div className="mobile-vote-button">
+        <Button
+          onClick={() =>
+            window.open(
+              "https://codetree-student-electon.streamlit.app/",
+              "_blank",
+            )
+          }
+          className="mobile-vote-button-content inline-flex items-center justify-center gap-3"
+        >
+          <ExternalLink className="w-6 h-6" />
+          투표하러 가기
+        </Button>
+      </div>
+
       {/* Footer */}
-      <footer className="bg-[hsl(217,19%,14%)] text-white py-8">
+      <footer className="bg-[hsl(217,19%,14%)] text-white py-8 pb-20 md:pb-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-lg font-medium mb-2">
             코드트리 바이브코딩 팀 프로젝트 전시관
